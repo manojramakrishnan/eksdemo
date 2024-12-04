@@ -26,14 +26,14 @@ spring:
                 name: DEPARTMENT-SERVICE
                 fallbackuri: forward:/departmentServiceFallBack
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    hostname: localhost
+# eureka:
+#   client:
+#     register-with-eureka: true
+#     fetch-registry: true
+#     service-url:
+#       defaultZone: http://localhost:8761/eureka/
+#   instance:
+#     hostname: localhost
 
 hystrix:
   command:
@@ -52,12 +52,12 @@ management:
 
 
 
-#eureka:
-#  instance:
-#    preferIpAddress: true
-#    hostname: eureka-0
-#  client:
-#    registerWithEureka: true
-#    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
+eureka:
+ instance:
+   preferIpAddress: true
+   hostname: eureka-0
+ client:
+   registerWithEureka: true
+   fetchRegistry: true
+   serviceUrl:
+     defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
