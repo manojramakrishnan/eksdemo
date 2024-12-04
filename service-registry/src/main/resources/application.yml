@@ -7,7 +7,7 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    serviceUrl:
+    service-url:
       defaultZone: ${EUREKA_SERVER_ADDRESS}
 
 #eureka:
